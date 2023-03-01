@@ -1,0 +1,23 @@
+<form (ngSubmit)="onSubmit()">
+    <div class="mb-3">
+      <label for="title" class="form-label">Title</label>
+      <input type="text" class="form-control" name="title" id="title" [(ngModel)]="title">
+    </div>
+    <div class="mb-3">
+      <label for="desc" class="form-label">Description</label>
+      <input type="text" class="form-control" name="desc" id="desc" [(ngModel)]="desc">
+    </div>
+    <div class="form-check">
+        <input class="form-check-input" type="radio" name="priority" id="priority_high" checked [(ngModel)]="priority">
+        <label class="form-check-label" for="priority_high">
+          Priority High
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="priority" id="priority_low" [(ngModel)]="priority">
+        <label class="form-check-label" for="priority_low">
+          Priority Low
+        </label>
+      </div>
+    <button type="submit" class="btn btn-primary">Add Todo</button>
+  </form>
